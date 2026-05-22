@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output (kept in gh-pages branch only)
+# dist/
+
+# Logs
+*.log
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
