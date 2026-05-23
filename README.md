@@ -26,5 +26,6 @@ graph TD
     G -->|回傳原始獎勵 R_env| H[3. 獎勵重塑 Reward Modifier]
     H -->|計算綜合理論獎勵 R_total| I[時間差分更新 Q-Table]
 
+```mermaid
 ##
 AI Harness 控制層的三大核心防禦維度安全沙盒預判 (Sandbox Simulation)在動作真正施加於遊戲環境前，Harness 在虛擬內存中模擬下一步的空間座標。若新座標超出邊界或存在於蛇身內部，則 is_suicidal 觸發 True。硬體動作沒收 (Action Overriding)當預判結果為致命，硬性沒收該決策權，並對剩餘的三個方向進行周邊掃描，強行覆寫為安全方向 $a_{safe}$，保護主體不受損壞。脈絡與獎勵重塑 (Context & Reward Shaping)將 Harness 的介入轉化為「導師信號（Guidance Signal）」回傳給大腦，給予虛擬懲罰值 $R_{penalty} = -5$。確保大腦雖然被救了一命，但依然能學到「剛剛那個想法是錯的」。
