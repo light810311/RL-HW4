@@ -95,3 +95,60 @@ graph TD
 
 * **左圖 (累積死亡對比)**：對照組 A 呈線性上升；實驗組 B 完美貼近 0 軸。
 * **右圖 (平均得分對比)**：實驗組 B 從初期即維持高水準並穩定攀升，證明了「活得久才能學得快」的強化學習防護優勢。
+
+---
+
+## 6. 安裝與佈署 (Installation & Deployment)
+
+本專案使用現代前端工具鏈 **Vite + React + TypeScript** 進行實作，並使用 **HTML5 Canvas** 進行渲染。以下為詳細的本地端安裝與部署步驟：
+
+### 前置準備 (Prerequisites)
+確保您的系統中已安裝 [Node.js](https://nodejs.org/)（建議 LTS 版本，例如 v18 或 v20 以上）。
+
+### 本地端安裝步驟
+1. 開啟終端機（Terminal）或 PowerShell，切換到本專案的應用程式目錄：
+   ```bash
+   cd snake-harness-app
+   ```
+2. 安裝所有相依套件：
+   ```bash
+   npm install
+   ```
+
+### 本地端運行開發伺服器
+安裝完成後，執行以下命令啟動 Vite 開發伺服器：
+```bash
+npm run dev
+```
+啟動成功後，使用瀏覽器打開控制台輸出的本地端網址（通常為 `http://localhost:5173/`），即可看到即時對照的實驗儀表板與運行畫面。
+
+### 編譯與打包（Build for Production）
+若要編譯成供生產環境部署的靜態資源，請執行：
+```bash
+npm run build
+```
+編譯完成後，會在 `snake-harness-app` 目錄下生成 `dist` 資料夾，該資料夾包含完整的 HTML、CSS 及 JavaScript 靜態檔案。
+
+### 佈署指南 (Deployment Guide)
+
+#### 部署至 GitHub Pages
+1. 在 `snake-harness-app` 目錄下安裝 `gh-pages` 套件：
+   ```bash
+   npm install gh-pages --save-dev
+   ```
+2. 在 `snake-harness-app/package.json` 中的 `"scripts"` 區塊新增以下指令：
+   ```json
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d dist"
+   ```
+3. 執行以下命令將應用程式佈署至 GitHub Pages：
+   ```bash
+   npm run deploy
+   ```
+
+#### 部署至 Vercel (推薦)
+1. 將程式碼推送到 GitHub 儲存庫。
+2. 登入 [Vercel 官網](https://vercel.com/)，匯入此 GitHub 儲存庫。
+3. Framework Preset 選擇 **Vite**，Root Directory 選擇 `snake-harness-app`。
+4. 點擊 **Deploy**，約 30 秒內即可完成自動建構與發佈。
+
