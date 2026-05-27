@@ -1,3 +1,6 @@
+![Uploading Infographic.png…]()
+
+
 # 基於 AI Harness 系統之強化學習貪食蛇安全駕馭架構研究
 
 ## 1. 問題定義與應用背景 (Problem Definition & Background)
