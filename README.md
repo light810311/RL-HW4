@@ -1,4 +1,5 @@
-![Uploading Infographic.png…]()
+<img width="2816" height="1536" alt="Infographic" src="https://github.com/user-attachments/assets/4931d811-5935-410a-8cc9-58ee85fc734a" />
+
 
 
 # 基於 AI Harness 系統之強化學習貪食蛇安全駕馭架構研究
