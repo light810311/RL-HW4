@@ -1,5 +1,5 @@
 # 基於 AI Harness 系統之強化學習貪食蛇安全駕馭架構研究
-
+<img width="2816" height="1536" alt="Infographic" src="https://github.com/user-attachments/assets/7f8e66f2-1c84-4a3b-8df5-cbb40da851b3" />
 ## 1. 問題定義與應用背景 (Problem Definition & Background)
 
 在傳統的強化學習（Reinforcement Learning, RL）中，Agent 必須透過不斷嘗試與錯誤（Trial and Error）來學習環境的互動策略。然而，當我們試圖將 RL 模型部署至真實世界的安全關鍵領域（Safety-Critical Applications，如自動駕駛、工業機械手臂、無人機控制）時，會面臨以下痛點：
